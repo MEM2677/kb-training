@@ -19,7 +19,7 @@
         <source pluginCode="jptableau">plugins</source>
         <method httpMethod="GET" active="true" canSpawnOthers="true">
             <description>Return a tableau by id</description>
-            <springBean name="jptableauTableauManager" method="getTableauForApi" />
+            <springBean name="jptableauUserManager" method="getTableauForApi" />
             <responseClass>org.entando.entando.plugins.jptableau.aps.system.services.tableau.api.TableauResponse</responseClass>
             <parameters>
                 <parameter key="id" required="true">
@@ -29,17 +29,17 @@
         </method>
         <method httpMethod="POST" active="true" requiredAuth="true" requiredPermission="superuser">
             <description>Add a tableau</description>
-            <springBean name="jptableauTableauManager" method="addTableauForApi" />
+            <springBean name="jptableauUserManager" method="addTableauForApi" />
             <expectedType>org.entando.entando.plugins.jptableau.aps.system.services.tableau.api.JAXBTableau</expectedType>
         </method>
         <method httpMethod="PUT" active="true" requiredAuth="true" requiredPermission="superuser">
             <description>Update a tableau</description>
-            <springBean name="jptableauTableauManager" method="updateTableauForApi" />
+            <springBean name="jptableauUserManager" method="updateTableauForApi" />
             <expectedType>org.entando.entando.plugins.jptableau.aps.system.services.tableau.api.JAXBTableau</expectedType>
         </method>
         <method httpMethod="DELETE" active="true" requiredAuth="true" requiredPermission="superuser">
             <description>Delete a tableau by id</description>
-            <springBean name="jptableauTableauManager" method="deleteTableauForApi" />
+            <springBean name="jptableauUserManager" method="deleteTableauForApi" />
             <parameters>
                 <parameter key="id" required="true">
                     <description>The id of the tableau to delete</description>

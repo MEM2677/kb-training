@@ -26,7 +26,7 @@ public class TableauTag extends TagSupport {
 	@Override
 	public int doStartTag() throws JspException {
 		ServletRequest request =  this.pageContext.getRequest();
-		ITableauUserManager tableauManager = (ITableauUserManager) ApsWebApplicationUtils.getBean("jptableauTableauManager", this.pageContext);
+		ITableauUserManager tableauManager = (ITableauUserManager) ApsWebApplicationUtils.getBean("jptableauUserManager", this.pageContext);
 		RequestContext reqCtx = (RequestContext) request.getAttribute(RequestContext.REQCTX);
 		try {
 		Tableau tableau = null;

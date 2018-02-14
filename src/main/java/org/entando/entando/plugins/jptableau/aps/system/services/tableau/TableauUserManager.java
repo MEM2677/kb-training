@@ -102,6 +102,7 @@ public class TableauUserManager extends AbstractService implements ITableauUserM
                 for (TableauUser user: tableauUsers) {
                 	Tableau tu = new Tableau();
                 	
+                	// we don't want to duplicate data...
                 	if (tableaus.contains(id)) {
                 		continue;
                 	}
