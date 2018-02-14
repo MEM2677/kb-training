@@ -5,7 +5,7 @@
         <source pluginCode="jptableau">plugins</source>
 		<method httpMethod="GET" active="true" canSpawnOthers="true">
 			<description>Return the tableaus list</description>
-			<springBean name="jptableauTableauManager" method="getTableausForApi" />
+			<springBean name="jptableauUserManager" method="getTableausForApi" />
 			<responseClass>org.entando.entando.plugins.jptableau.aps.system.services.tableau.api.TableauListResponse</responseClass>
 			<!-- 
 			<parameters>

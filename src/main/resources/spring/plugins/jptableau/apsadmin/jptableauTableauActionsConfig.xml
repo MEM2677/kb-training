@@ -12,19 +12,19 @@
 	<bean id="jptableauTableauFinderAction" scope="prototype" 
 			class="org.entando.entando.plugins.jptableau.apsadmin.tableau.TableauFinderAction" 
 			parent="abstractBaseAction" >
-		<property name="tableauManager" ref="jptableauTableauManager" />
+		<property name="tableauManager" ref="jptableauUserManager" />
 	</bean>
 
 	<bean id="jptableauTableauAction" scope="prototype" 
 			class="org.entando.entando.plugins.jptableau.apsadmin.tableau.TableauAction" 
 			parent="abstractBaseAction" >
-		<property name="tableauManager" ref="jptableauTableauManager" />
+		<property name="tableauManager" ref="jptableauUserManager" />
 	</bean>
 
 
 	<bean id="jptableauTableauConfigAction" class="org.entando.entando.plugins.jptableau.apsadmin.portal.specialwidget.tableau.TableauConfigAction"
 		parent="simpleWidgetAction" scope="prototype">
-		<property name="tableauManager" ref="jptableauTableauManager" />
+		<property name="tableauManager" ref="jptableauUserManager" />
 	</bean>
 
 
@@ -32,13 +32,13 @@
 	<bean id="jptableauTableauFinderFrontEndAction" scope="prototype" 
 			class="org.entando.entando.plugins.jptableau.aps.internalservlet.tableau.TableauFinderFrontEndAction" 
 			parent="abstractBaseAction" >
-		<property name="tableauManager" ref="jptableauTableauManager" />
+		<property name="tableauManager" ref="jptableauUserManager" />
 	</bean>
 	
 	<bean id="jptableauTableauFrontEndAction" scope="prototype" 
 			class="org.entando.entando.plugins.jptableau.aps.internalservlet.tableau.TableauFrontEndAction" 
 			parent="abstractBaseAction" >
-		<property name="tableauManager" ref="jptableauTableauManager" />
+		<property name="tableauManager" ref="jptableauUserManager" />
 	</bean>
  	
  	

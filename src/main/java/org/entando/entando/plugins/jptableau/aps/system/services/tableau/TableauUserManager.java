@@ -79,7 +79,7 @@ public class TableauUserManager extends AbstractService implements ITableauUserM
     public Tableau getTableau(int id) throws ApsSystemException {
         Tableau tableau = null;
         try {
-
+        	tableau = _users.get(id);
         } catch (Throwable t) {
             _logger.error("Error loading tableau with id '{}'", id,  t);
             throw new ApsSystemException("Error loading tableau with id: " + id, t);
@@ -90,6 +90,7 @@ public class TableauUserManager extends AbstractService implements ITableauUserM
     @Override
     public List<Integer> getTableaus() throws ApsSystemException {
         List<Integer> tableaus = new ArrayList<Integer>();
+        Integer id = 1;
         try {
             // login!
             TableauLoginResponse credentials = this.getAuthenticationManger().login();
@@ -98,7 +99,23 @@ public class TableauUserManager extends AbstractService implements ITableauUserM
             // convert to data created by EDO
             if (null != tableauUsers
                     && !tableauUsers.isEmpty()) {
-                System.out.println("\nMUST CONVERT\n");
+                for (TableauUser user: tableauUsers) {
+                	Tableau tu = new Tableau();
+                	
+                	tu.setId(id++);
+                	tu.setLastlogin(user.getLastLogin());
+                	tu.setName(user.getName());
+                	tu.setSiterole(user.getSiteRole());
+                	tu.setAuthsetting(user.getAuthSetting());
+                	
+                	// create internal list
+                	_users.put(id, tu);
+                	// create result
+                	tableaus.add(id);
+                	_logger.info("added user with Entando id {} and Tableau ID {}",
+                			id,
+                			user.getId());
+                }
             }
         } catch (Throwable t) {
             _logger.error("Error loading Tableau list",  t);
@@ -111,7 +128,8 @@ public class TableauUserManager extends AbstractService implements ITableauUserM
     public List<Integer> searchTableaus(FieldSearchFilter filters[]) throws ApsSystemException {
         List<Integer> tableaus = new ArrayList<Integer>();
         try {
-
+        	// return everything by default
+        	tableaus = getTableaus();
         } catch (Throwable t) {
             _logger.error("Error searching Tableaus", t);
             throw new ApsSystemException("Error searching Tableaus", t);
@@ -122,7 +140,6 @@ public class TableauUserManager extends AbstractService implements ITableauUserM
     @Override
     public void addTableau(Tableau tableau) throws ApsSystemException {
         try {
-
 
 
             this.notifyTableauChangedEvent(tableau, TableauChangedEvent.INSERT_OPERATION_CODE);
@@ -261,6 +278,8 @@ public class TableauUserManager extends AbstractService implements ITableauUserM
         this._authenticationManger = authenticationManger;
     }
 
+    private Map<Integer, Tableau> _users = new HashMap<>();
+    
     private ITableauAuthenticationManger _authenticationManger;
 
 }
