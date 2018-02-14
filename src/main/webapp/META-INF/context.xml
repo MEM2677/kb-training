@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context path="/keybiz-training" docBase="./keybiz-training" debug="1" reloadable="false">
+	
+	<Environment name="logName" value="keybiz-training" type="java.lang.String" override="false" />
+	<Environment name="logFilePrefix" value="/home/matteo/workspace/corsi/keybiz-training/target/log_keybiz-training" type="java.lang.String" override="false" />
+	<Environment name="logLevel" value="INFO" type="java.lang.String" override="false" />
+	<Environment name="logFileSize" value="200000" type="java.lang.String" override="false" />
+	<Environment name="logFilesCount" value="10" type="java.lang.String" override="false" />
+	
+	<Environment name="configVersion" value="production" type="java.lang.String" override="false" />
+	
+	<Environment name="applicationBaseURL" value="http://localhost:8080/keybiz-training/" type="java.lang.String" override="false" />
+	<Environment name="resourceRootURL" value="/keybiz-training/resources/" type="java.lang.String" override="false" />
+	<Environment name="protectedResourceRootURL" value="/keybiz-training/protected/" type="java.lang.String" override="false" />
+	
+	<Environment name="resourceDiskRootFolder" value="/home/matteo/workspace/corsi/keybiz-training/src/main/webapp/resources" type="java.lang.String" override="false" />
+	<Environment name="protectedResourceDiskRootFolder" value="/home/matteo/workspace/corsi/keybiz-training/src/main/webapp/protected" type="java.lang.String" override="false" />
+	
+	<Environment name="indexDiskRootFolder" value="/home/matteo/workspace/corsi/keybiz-training/target/temp/indexdir" type="java.lang.String" override="false" />
+	
+	<Resource name="jdbc/portDataSource" auth="Container" 
+		type="javax.sql.DataSource" driverClassName="org.apache.derby.jdbc.EmbeddedDriver" 
+		maxActive="8" maxIdle="4" 
+		username="agile" password="agile" 
+		url="jdbc:derby:/home/matteo/workspace/corsi/keybiz-training/target/derby/production/keybiz-trainingPort;create=true" />
+	
+	<Resource name="jdbc/servDataSource" auth="Container" 
+		type="javax.sql.DataSource" driverClassName="org.apache.derby.jdbc.EmbeddedDriver" 
+		maxActive="8" maxIdle="4" 
+		username="agile" password="agile" 
+		url="jdbc:derby:/home/matteo/workspace/corsi/keybiz-training/target/derby/production/keybiz-trainingServ;create=true" />
+	
+</Context>

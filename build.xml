@@ -1,0 +1,7 @@
+<project name="keybiz-training" default="WAR-build" basedir=".">
+	<description>keybiz-training - Build file</description>
+
+	<import file="buildProperties.xml"/>
+	<import file="buildTasks.xml"/>
+
+</project>
