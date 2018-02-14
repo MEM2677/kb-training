@@ -102,7 +102,11 @@ public class TableauUserManager extends AbstractService implements ITableauUserM
                 for (TableauUser user: tableauUsers) {
                 	Tableau tu = new Tableau();
                 	
-                	tu.setId(id++);
+                	if (tableaus.contains(id)) {
+                		continue;
+                	}
+                	
+                	tu.setId(id);
                 	tu.setLastlogin(user.getLastLogin());
                 	tu.setName(user.getName());
                 	tu.setSiterole(user.getSiteRole());
@@ -115,6 +119,7 @@ public class TableauUserManager extends AbstractService implements ITableauUserM
                 	_logger.info("added user with Entando id {} and Tableau ID {}",
                 			id,
                 			user.getId());
+                	id++;
                 }
             }
         } catch (Throwable t) {
