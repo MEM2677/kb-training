@@ -9,9 +9,9 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import com.agiletec.aps.system.services.lang.Lang;
 import com.agiletec.apsadmin.portal.specialwidget.SimpleWidgetConfigAction;
-import org.entando.entando.plugins.jptableau.aps.system.services.tableau.ITableauManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.entando.entando.plugins.jptableau.aps.system.services.tableau.ITableauUserManager;
 
 public class TableauConfigAction extends SimpleWidgetConfigAction {
 
@@ -43,14 +43,14 @@ public class TableauConfigAction extends SimpleWidgetConfigAction {
 		this._id = id;
 	}
 
-	protected ITableauManager getTableauManager() {
+	protected ITableauUserManager getTableauManager() {
 		return _tableauManager;
 	}
-	public void setTableauManager(ITableauManager tableauManager) {
+	public void setTableauManager(ITableauUserManager tableauManager) {
 		this._tableauManager = tableauManager;
 	}
 
 	private int _id;
-	private ITableauManager _tableauManager;
+	private ITableauUserManager _tableauManager;
 }
 

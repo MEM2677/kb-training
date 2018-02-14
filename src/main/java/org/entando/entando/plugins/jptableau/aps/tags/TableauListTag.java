@@ -14,7 +14,7 @@ import com.agiletec.aps.system.RequestContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.agiletec.aps.util.ApsWebApplicationUtils;
-import org.entando.entando.plugins.jptableau.aps.system.services.tableau.ITableauManager;
+import org.entando.entando.plugins.jptableau.aps.system.services.tableau.ITableauUserManager;
 
 public class TableauListTag extends TagSupport {
 
@@ -23,7 +23,7 @@ public class TableauListTag extends TagSupport {
 	@Override
 	public int doStartTag() throws JspException {
 		ServletRequest request =  this.pageContext.getRequest();
-		ITableauManager tableauManager = (ITableauManager) ApsWebApplicationUtils.getBean("jptableauTableauManager", this.pageContext);
+		ITableauUserManager tableauManager = (ITableauUserManager) ApsWebApplicationUtils.getBean("jptableauTableauManager", this.pageContext);
 		RequestContext reqCtx = (RequestContext) request.getAttribute(RequestContext.REQCTX);
 		try {
 			/*

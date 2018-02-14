@@ -10,10 +10,10 @@ import org.apache.commons.lang.StringUtils;
 
 import com.agiletec.aps.system.common.FieldSearchFilter;
 import org.entando.entando.plugins.jptableau.aps.system.services.tableau.Tableau;
-import org.entando.entando.plugins.jptableau.aps.system.services.tableau.ITableauManager;
 import com.agiletec.apsadmin.system.BaseAction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.entando.entando.plugins.jptableau.aps.system.services.tableau.ITableauUserManager;
 
 public class TableauFinderAction extends BaseAction {
 
@@ -117,10 +117,10 @@ public class TableauFinderAction extends BaseAction {
 	}
 
 
-	protected ITableauManager getTableauManager() {
+	protected ITableauUserManager getTableauManager() {
 		return _tableauManager;
 	}
-	public void setTableauManager(ITableauManager tableauManager) {
+	public void setTableauManager(ITableauUserManager tableauManager) {
 		this._tableauManager = tableauManager;
 	}
 	
@@ -129,5 +129,5 @@ public class TableauFinderAction extends BaseAction {
 	private String _siterole;
 	private String _authsetting;
 	private String _lastlogin;
-	private ITableauManager _tableauManager;
+	private ITableauUserManager _tableauManager;
 }

@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package it.keybiz.tableau.aps.system.services.tableau;
+package org.entando.entando.plugins.jptableau.aps.system.services.tableau;
 
-import static it.keybiz.tableau.aps.system.TableauSystemConstants.API_LOGIN;
-import static it.keybiz.tableau.aps.system.TableauSystemConstants.GET_SITE_USERS;
 import java.util.HashMap;
 import org.apache.http.HttpStatus;
 import org.entando.entando.plugins.jprestapi.aps.core.Endpoint;
 import org.entando.entando.plugins.jprestapi.aps.core.IEndpoint;
+import static org.entando.entando.plugins.jptableau.aps.system.TableauSystemConstants.API_LOGIN;
+import static org.entando.entando.plugins.jptableau.aps.system.TableauSystemConstants.GET_SITE_USERS;
 
 /**
  *

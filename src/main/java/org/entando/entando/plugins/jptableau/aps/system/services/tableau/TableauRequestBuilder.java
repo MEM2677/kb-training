@@ -1,11 +1,10 @@
-package it.keybiz.tableau.aps.system.services.tableau;
+package org.entando.entando.plugins.jptableau.aps.system.services.tableau;
 
-//import org.apache.http.impl.client.DefaultHttpClient;
-import static it.keybiz.tableau.aps.system.services.tableau.TableauAuthenticationManager.TABLEAU_BASE_ADDRESS;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.entando.entando.plugins.jprestapi.aps.core.RequestBuilder;
 import org.entando.entando.plugins.jprestapi.aps.core.helper.RequestHelper;
+import static org.entando.entando.plugins.jptableau.aps.system.services.tableau.TableauAuthenticationManager.TABLEAU_BASE_ADDRESS;
 
 public class TableauRequestBuilder extends RequestBuilder {
 
@@ -28,6 +27,6 @@ public class TableauRequestBuilder extends RequestBuilder {
 
         return httpclient;
     }
-    
+
     public static final int TIMEOUT = 350;
 }

@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package it.keybiz.tableau.aps.system.services.tableau.model;
+package org.entando.entando.plugins.jptableau.aps.system.services.tableau.model;
 
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -15,19 +14,18 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author matteo
  */
-@XmlRootElement(name = "users")
+@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class TableauUserList {
+public class TableauUserListResponse {
 
-    public List<TableauUser> getUserList() {
-        return userList;
+    public TableauUserList getPayload() {
+        return payload;
     }
 
-    public void setUserList(List<TableauUser> userList) {
-        this.userList = userList;
+    public void setPayload(TableauUserList payload) {
+        this.payload = payload;
     }
 
-    @XmlElement(name = "user")
-    private List<TableauUser> userList;
-
+    @XmlElement(name = "users")
+    private TableauUserList payload;
 }

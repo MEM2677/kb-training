@@ -6,7 +6,6 @@
 package org.entando.entando.plugins.jptableau.apsadmin.tableau;
 
 import org.entando.entando.plugins.jptableau.aps.system.services.tableau.Tableau;
-import org.entando.entando.plugins.jptableau.aps.system.services.tableau.ITableauManager;
 
 
 
@@ -14,6 +13,7 @@ import com.agiletec.apsadmin.system.ApsAdminSystemConstants;
 import com.agiletec.apsadmin.system.BaseAction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.entando.entando.plugins.jptableau.aps.system.services.tableau.ITableauUserManager;
 
 public class TableauAction extends BaseAction {
 
@@ -166,10 +166,10 @@ public class TableauAction extends BaseAction {
 	}
 
 	
-	protected ITableauManager getTableauManager() {
+	protected ITableauUserManager getTableauManager() {
 		return _tableauManager;
 	}
-	public void setTableauManager(ITableauManager tableauManager) {
+	public void setTableauManager(ITableauUserManager tableauManager) {
 		this._tableauManager = tableauManager;
 	}
 	
@@ -180,6 +180,6 @@ public class TableauAction extends BaseAction {
 	private String _authsetting;
 	private String _lastlogin;
 	
-	private ITableauManager _tableauManager;
+	private ITableauUserManager _tableauManager;
 	
 }

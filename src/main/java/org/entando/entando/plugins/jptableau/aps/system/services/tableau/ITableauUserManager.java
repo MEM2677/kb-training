@@ -9,8 +9,12 @@ import java.util.List;
 import com.agiletec.aps.system.exception.ApsSystemException;
 
 import com.agiletec.aps.system.common.FieldSearchFilter;
+import org.entando.entando.plugins.jptableau.aps.system.services.tableau.model.TableauLoginResponse;
+import org.entando.entando.plugins.jptableau.aps.system.services.tableau.model.TableauUser;
 
-public interface ITableauManager {
+public interface ITableauUserManager {
+
+    public List<TableauUser> getUsers(TableauLoginResponse credentials) throws ApsSystemException;
 
 	public Tableau getTableau(int id) throws ApsSystemException;
 

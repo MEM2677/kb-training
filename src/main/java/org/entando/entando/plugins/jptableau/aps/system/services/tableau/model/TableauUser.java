@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package it.keybiz.tableau.aps.system.services.tableau.model;
+package org.entando.entando.plugins.jptableau.aps.system.services.tableau.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -57,7 +57,7 @@ public class TableauUser {
         this.lastLogin = lastLogin;
     }
 
-    
+
 
     private String id;
     private String name;
