@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="jptableau_do/FrontEnd/jptableau/Tableau" namespace="/do/FrontEnd/jptableau/Tableau" extends="entando-front-default">
+		
+		<global-results>
+			<result name="failure" type="guiFragment">
+				<param name="code">jptableau_is_front_Tableau_error</param>
+				<param name="jspLocation">/WEB-INF/plugins/jptableau/aps/jsp/internalservlet/tableau/frontend-tableau-error.jsp</param>
+			</result>
+    	</global-results>
+		
+    	<action name="list" class="jptableauTableauFinderFrontEndAction">
+    		<result type="guiFragment">
+				<param name="code">jptableau_is_front_Tableau_list</param>
+				<param name="jspLocation">/WEB-INF/plugins/jptableau/aps/jsp/internalservlet/tableau/frontend-tableau-list.jsp</param>
+			</result>
+			<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+        
+    	<action name="search" class="jptableauTableauFinderFrontEndAction">
+            <result type="guiFragment">
+				<param name="code">jptableau_is_front_Tableau_list</param>
+				<param name="jspLocation">/WEB-INF/plugins/jptableau/aps/jsp/internalservlet/tableau/frontend-tableau-list.jsp</param>
+			</result>
+			<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+    	
+        <action name="new" class="jptableauTableauFrontEndAction" method="newTableau">
+            <result type="guiFragment">
+				<param name="code">jptableau_is_front_Tableau_entry</param>
+				<param name="jspLocation">/WEB-INF/plugins/jptableau/aps/jsp/internalservlet/tableau/frontend-tableau-entry.jsp</param>
+			</result>
+			<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+    	
+        <action name="edit" class="jptableauTableauFrontEndAction" method="edit">
+            <result type="guiFragment">
+				<param name="code">jptableau_is_front_Tableau_entry</param>
+				<param name="jspLocation">/WEB-INF/plugins/jptableau/aps/jsp/internalservlet/tableau/frontend-tableau-entry.jsp</param>
+			</result>
+			<result name="input" type="frontRedirectAction">
+				<param name="actionName">list</param>
+			</result>
+        	<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+        
+        <action name="save" class="jptableauTableauFrontEndAction" method="save">
+        	<result name="input" type="guiFragment">
+				<param name="code">jptableau_is_front_Tableau_entry</param>
+				<param name="jspLocation">/WEB-INF/plugins/jptableau/aps/jsp/internalservlet/tableau/frontend-tableau-entry.jsp</param>
+			</result>
+			<result type="frontRedirectAction">
+				<param name="actionName">list</param>
+			</result>
+        	<interceptor-ref name="entandoFrontEndFreeValidationStack"></interceptor-ref>
+        </action>
+		
+    	<action name="trash" class="jptableauTableauFrontEndAction" method="trash">
+            <result type="guiFragment">
+				<param name="code">jptableau_is_front_Tableau_trash</param>
+				<param name="jspLocation">/WEB-INF/plugins/jptableau/aps/jsp/internalservlet/tableau/frontend-tableau-trash.jsp</param>
+			</result>
+			<result name="input" type="frontRedirectAction">
+				<param name="actionName">list</param>
+			</result>
+        	<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+        
+    	<action name="delete" class="jptableauTableauFrontEndAction" method="delete">
+        	<result type="frontRedirectAction">
+				<param name="actionName">list</param>
+			</result>
+        	<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+    	
+    </package>
+   
+</struts>

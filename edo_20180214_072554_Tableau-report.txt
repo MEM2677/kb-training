@@ -1,0 +1,108 @@
+****************************************************************
+
+						Edo Report		
+								
+****************************************************************
+
+=== Command Line
+
+[Tableau, name:string-r60, siterole:string-r60, authsetting:string-r60, lastlogin:string-r60]
+
+
+
+=== List of geneated files that MUST be merged:
+----------------------------------------------------------------
+Total files: 0
+Total lines: 0
+
+
+=== List of geneated files:
+src/main/java/org/entando/entando/plugins/jptableau/aps/internalservlet/tableau/TableauFinderFrontEndAction.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/internalservlet/tableau/TableauFrontEndAction.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/internalservlet/tableau/tableauFront.xml
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/init/servdb/Tableau.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/services/tableau/ITableauDAO.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/services/tableau/ITableauManager.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/services/tableau/Tableau.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/services/tableau/TableauDAO.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/services/tableau/TableauManager.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/services/tableau/api/JAXBTableau.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/services/tableau/api/TableauListResponse.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/services/tableau/api/TableauListResponseResult.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/services/tableau/api/TableauResponse.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/services/tableau/api/TableauResponseResult.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/services/tableau/event/TableauChangedEvent.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/system/services/tableau/event/TableauChangedObserver.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/tags/TableauListTag.java
+src/main/java/org/entando/entando/plugins/jptableau/aps/tags/TableauTag.java
+src/main/java/org/entando/entando/plugins/jptableau/apsadmin/global-messages_en.properties
+src/main/java/org/entando/entando/plugins/jptableau/apsadmin/global-messages_it.properties
+src/main/java/org/entando/entando/plugins/jptableau/apsadmin/portal/specialwidget/tableau/TableauConfigAction.java
+src/main/java/org/entando/entando/plugins/jptableau/apsadmin/portal/specialwidget/tableau/package_en.properties
+src/main/java/org/entando/entando/plugins/jptableau/apsadmin/portal/specialwidget/tableau/package_it.properties
+src/main/java/org/entando/entando/plugins/jptableau/apsadmin/portal/specialwidget/tableau/tableauSpecialWidget.xml
+src/main/java/org/entando/entando/plugins/jptableau/apsadmin/tableau/TableauAction-validation.xml
+src/main/java/org/entando/entando/plugins/jptableau/apsadmin/tableau/TableauAction.java
+src/main/java/org/entando/entando/plugins/jptableau/apsadmin/tableau/TableauFinderAction.java
+src/main/java/org/entando/entando/plugins/jptableau/apsadmin/tableau/package_en.properties
+src/main/java/org/entando/entando/plugins/jptableau/apsadmin/tableau/package_it.properties
+src/main/java/org/entando/entando/plugins/jptableau/apsadmin/tableau/tableau.xml
+src/main/resources/api/plugins/jptableau/aps/apiMethods.xml
+src/main/resources/component/plugins/jptableau/component.xml
+src/main/resources/entando-struts-plugin.xml
+src/main/resources/shortcuts/plugins/jptableau/apsadmin/shortcuts.xml
+src/main/resources/spring/plugins/jptableau/aps/managers/jptableauTableauManagersConfig.xml
+src/main/resources/spring/plugins/jptableau/apsadmin/jptableauTableauActionsConfig.xml
+src/main/resources/sql/plugins/jptableau/port_data_production.sql
+src/main/resources/sql/plugins/jptableau/serv_data_production.sql
+src/main/tld/plugins/jptableau/jptableau-core.tld
+src/main/webapp/WEB-INF/plugins/jptableau/aps/jsp/internalservlet/tableau/frontend-tableau-entry.jsp
+src/main/webapp/WEB-INF/plugins/jptableau/aps/jsp/internalservlet/tableau/frontend-tableau-error.jsp
+src/main/webapp/WEB-INF/plugins/jptableau/aps/jsp/internalservlet/tableau/frontend-tableau-list.jsp
+src/main/webapp/WEB-INF/plugins/jptableau/aps/jsp/internalservlet/tableau/frontend-tableau-trash.jsp
+src/main/webapp/WEB-INF/plugins/jptableau/aps/jsp/widgets/jptableauTableau.jsp
+src/main/webapp/WEB-INF/plugins/jptableau/apsadmin/jptableau-tiles.xml
+src/main/webapp/WEB-INF/plugins/jptableau/apsadmin/jsp/common/layouts/assets-more/tableau-entry-extras.jsp
+src/main/webapp/WEB-INF/plugins/jptableau/apsadmin/jsp/common/layouts/assets-more/tableau-list-extras.jsp
+src/main/webapp/WEB-INF/plugins/jptableau/apsadmin/jsp/common/layouts/assets-more/tableau-trash-extras.jsp
+src/main/webapp/WEB-INF/plugins/jptableau/apsadmin/jsp/common/layouts/subMenu.jsp
+src/main/webapp/WEB-INF/plugins/jptableau/apsadmin/jsp/portal/specialwidget/tableau/tableau-config.jsp
+src/main/webapp/WEB-INF/plugins/jptableau/apsadmin/jsp/tableau/tableau-entry.jsp
+src/main/webapp/WEB-INF/plugins/jptableau/apsadmin/jsp/tableau/tableau-list.jsp
+src/main/webapp/WEB-INF/plugins/jptableau/apsadmin/jsp/tableau/tableau-trash.jsp
+src/test/java/org/entando/entando/plugins/jptableau/JptableauConfigTestUtils.java
+src/test/java/org/entando/entando/plugins/jptableau/aps/JptableauBaseTestCase.java
+src/test/java/org/entando/entando/plugins/jptableau/aps/system/services/TestTableauManager.java
+src/test/java/org/entando/entando/plugins/jptableau/apsadmin/JptableauApsAdminBaseTestCase.java
+src/test/java/org/entando/entando/plugins/jptableau/apsadmin/tableau/TestTableauAction.java
+src/test/java/org/entando/entando/plugins/jptableau/apsadmin/tableau/TestTableauFinderAction.java
+src/test/resources/sql/plugins/jptableau/port_data_test.sql
+src/test/resources/sql/plugins/jptableau/serv_data_test.sql
+----------------------------------------------------------------
+Total files: 61
+Total lines: 3363
+
+
+
+
+
+=== Revert *port inserts
+
+DELETE FROM localstrings where keycode = 'jptableau_TABLEAU_ID'; 
+DELETE FROM localstrings where keycode = 'jptableau_TABLEAU_NAME'; 
+DELETE FROM localstrings where keycode = 'jptableau_TABLEAU_SITEROLE'; 
+DELETE FROM localstrings where keycode = 'jptableau_TABLEAU_AUTHSETTING'; 
+DELETE FROM localstrings where keycode = 'jptableau_TABLEAU_LASTLOGIN'; 
+DELETE FROM localstrings where keycode = 'jptableau_TABLEAU_ACTIONS'; 
+DELETE FROM localstrings where keycode = 'jptableau_TABLEAU_NEW'; 
+DELETE FROM localstrings where keycode = 'jptableau_TABLEAU_EDIT'; 
+DELETE FROM localstrings where keycode = 'jptableau_TABLEAU_TRASH'; 
+DELETE FROM localstrings where keycode = 'jptableau_TABLEAU_TRASH_CONFIRM'; 
+DELETE FROM localstrings where keycode = 'jptableau_TABLEAU_SEARCH_TABLEAU'; 
+
+
+DELETE FROM widgetcatalog where code = 'jptableauTableau_list_form';
+DELETE FROM widgetcatalog where code = 'jptableauTableau';
+
+
+

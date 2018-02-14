@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+    <definition extends="layout.default" name="jptableau.admin.Tableau.list">
+		<put-attribute name="title" value="jptableau.title.tableauManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jptableau/apsadmin/jsp/tableau/tableau-list.jsp" />
+		<put-attribute name="extraResources" value="/WEB-INF/plugins/jptableau/apsadmin/jsp/common/layouts/assets-more/tableau-list-extras.jsp"/>
+	</definition>
+    <definition extends="layout.default" name="jptableau.admin.Tableau.entry">
+		<put-attribute name="title" value="jptableau.title.tableauManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jptableau/apsadmin/jsp/tableau/tableau-entry.jsp" />
+		<put-attribute name="extraResources" value="/WEB-INF/plugins/jptableau/apsadmin/jsp/common/layouts/assets-more/tableau-entry-extras.jsp"/>
+	</definition>
+    <definition extends="layout.default" name="jptableau.admin.Tableau.trash">
+		<put-attribute name="title" value="jptableau.title.tableauManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jptableau/apsadmin/jsp/tableau/tableau-trash.jsp" />
+		<put-attribute name="extraResources" value="/WEB-INF/plugins/jptableau/apsadmin/jsp/common/layouts/assets-more/tableau-trash-extras.jsp"/>
+	</definition>
+
+    <definition extends="layout.default" name="jptableau.admin.page.widget.Tableau.entry">
+		<put-attribute name="title" value="jptableau.title.tableauManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jptableau/apsadmin/jsp/portal/specialwidget/tableau/tableau-config.jsp" />
+	</definition>
+
+</tiles-definitions>
+
+

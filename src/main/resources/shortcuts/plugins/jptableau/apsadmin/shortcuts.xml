@@ -1,0 +1,15 @@
+<shortcut-def>
+	<shortcuts>
+		<shortcut id="jptableau.Tableau.shortCut" requiredPermission="superuser" menusection="plugins" source="jptableau">
+			<description key="jptableau.Tableau.shortCut.list.shortDesc">Tableau list</description>
+			<longdesc key="jptableau.Tableau.shortCut.list.longDesc">
+				<![CDATA[Tableau shortCut longDesc ]]>
+			</longdesc>
+			<url>
+				<param name="namespace">/do/jptableau/Tableau</param>
+				<param name="actionName">list</param>
+			</url>
+		</shortcut>
+	</shortcuts>
+	
+</shortcut-def>
